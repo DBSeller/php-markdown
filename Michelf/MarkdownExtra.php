@@ -559,7 +559,7 @@ class MarkdownExtra extends \Michelf\Markdown {
 				)
 			{
 				// Need to parse tag and following text using the HTML parser.
-				list($block_text, $text) =
+				[$block_text, $text] =
 					$this->_hashHTMLBlocks_inHTML($tag . $text, "hashBlock", true);
 
 				// Make sure it stays outside of any paragraph by adding newlines.
@@ -572,7 +572,7 @@ class MarkdownExtra extends \Michelf\Markdown {
 			{
 				// Need to parse tag and following text using the HTML parser.
 				// (don't check for markdown attribute)
-				list($block_text, $text) =
+				[$block_text, $text] =
 					$this->_hashHTMLBlocks_inHTML($tag . $text, "hashClean", false);
 
 				$parsed .= $block_text;
@@ -745,7 +745,7 @@ class MarkdownExtra extends \Michelf\Markdown {
 					$tag_name_re = $matches[1];
 
 					// Parse the content using the HTML-in-Markdown parser.
-					list ($block_text, $text)
+					[$block_text, $text]
 						= $this->_hashHTMLBlocks_inMarkdown($text, $indent,
 							$tag_name_re, $span_mode);
 
