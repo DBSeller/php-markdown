@@ -17,6 +17,10 @@
         {
             "name": "John Gruber",
             "homepage": "https://daringfireball.net/"
+        },
+        {
+            "name": "Gabriel Morgado",
+            "email": "gabriel.morgado@dbseller.com.br"
         }
     ],
     "require": {
